@@ -1,0 +1,178 @@
+.promo {
+   padding: 23px 0 80px 0;
+   background: url('../img/bg_main.jpg') no-repeat 50% / cover;
+   .hamburger {
+      display: none;
+      position: absolute;
+      padding-top: 10px;
+      top: -30px;
+      right: 20px;
+      width: 35px;
+      height: 30px;
+      span {
+         display: block;
+         width: 100%;
+         height: 2px;
+         background-color: $white-text;
+         margin-bottom: 4px;
+         transition: .5s all;
+      }
+      &_active {
+         position: fixed;
+         z-index: 10;
+         top: 20px;
+         background-color: rgba($color: $sub-color, $alpha: .9);
+         width: 35px;
+         height: 30px;
+         border-radius: 5px;
+         span {
+            margin-bottom: -2px;
+            &:nth-child(1) {
+               transform: translateY(3px) rotate(-45deg);
+            }
+            &:nth-child(2) {
+               opacity: 0;
+            }
+            &:nth-child(3) {
+               transform: translateY(3px) rotate(45deg);
+            }
+         }
+      }
+   }
+   &__head {
+      display: grid;
+      grid-template-columns: 95px 600px 340px;
+      justify-content: space-between;
+   }
+   &__logo {
+      display: block;
+      width: 95px;
+      height: 99px;
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+   .menu {
+      &__list {
+         margin: 0;
+         height: 100%;
+         list-style-type: none;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+      }
+      &__links {
+         border-right: dotted 1px $grey-text;
+         padding-right: 13px;
+
+         &:last-child {
+            border-right: none;
+            padding-right: none;
+         }
+         a {
+            font-size: 15px;
+            font-weight: 300;
+            line-height: 20px;
+            color: $white-text;
+            transition: .5s all;
+            text-decoration: none;
+            &:hover, &:focus {
+               color: $main-color;
+               border-bottom: 1px solid $main-color;
+            }
+         }
+      }
+   }
+   // &__call {
+   //    display: flex;
+   //    align-items: center;
+   //    justify-content: space-between;
+   //    &-text {
+   //       font-size: 14px;
+   //       font-weight: 300;
+   //       color: $white-text;
+   //    }
+   //    &-tel {
+   //       font-size: 19px;
+   //       font-weight: 700;
+   //       color: $white-text;
+   //       transition: all .3s;
+   //       &:hover {
+   //          color: $main-color;
+   //       }
+   //    }
+   // }
+   &__title {
+      font-size: 24px;
+      font-weight: 300;
+      color: $white-text;
+      margin: 10px 0 0 0;
+      text-align: center;
+      line-height: 24px;
+   }
+   &__big {
+      font-family: 'Roboto Condensed';
+      font-size: 72px;
+      font-weight: 700;
+      color: $main-color;
+      text-align: center;
+      margin: 26px 0 0 0;
+      line-height: 72px;
+   }
+   &__subtitle {
+      font-family: 'Roboto Condensed';
+      font-size: 42px;
+      font-weight: 400;
+      color: $white-text;
+      text-align: center;
+      margin: 13px 0 0 0;
+      line-height: 42px;
+   }
+   &__divider {
+      position: relative;
+      margin: 38px auto 0 auto;
+      width: 10px;
+      height: 10px;
+      border-radius: 100%;
+      background-color: $white-text;
+      &::before {
+         @include promo-line;
+      }
+      &::after {
+         @include promo-line;
+         left: 20px;
+      }
+   }
+   &__wrapper {
+      margin-top: 27px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, 260px);
+      grid-auto-rows: minmax(120px, auto);
+      row-gap: 20px;
+      justify-content: space-between;
+   }
+   &__item {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      text-align: center;
+      &-img {
+         width: 60px;
+         height: 60px;
+         object-fit: cover;
+      }
+      &-descr {
+         margin-top: 13px;
+         font-size: 16px;
+         font-weight: 300;
+         color: $white-text;
+      }
+   }
+   .btn_main {
+      display: block;
+      margin: 40px auto 0 auto;
+   }
+}

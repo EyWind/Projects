@@ -1,0 +1,27 @@
+.benefits {
+   padding: 57px 0 50px 0;
+   background-color: $bg-color;
+   &__wrapper {
+      margin-top: 30px;
+      display: grid;
+      grid-template: repeat(4, minmax(62px, auto)) / repeat(2, 500px);
+      grid-auto-rows: minmax(62px, auto);
+      row-gap: 36px;
+      justify-content: space-between;
+   }
+   &__item {
+      display: grid;
+      grid-template-columns: 60px auto;
+      align-items: start;
+      column-gap: 15px;
+      &-img {
+         margin-top: 10px;
+         width: 60px;
+         height: 60px;
+         object-fit: cover;
+      }
+      &-descr {
+         margin-top: 10px;
+      }
+   }
+}

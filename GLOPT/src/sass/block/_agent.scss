@@ -1,0 +1,33 @@
+.agent {
+   padding: 58px 0 75px 0;
+   background: url('../img/bg_great-wall.jpg') no-repeat 50% / cover;
+   &_managers {
+      background: url('../img/bg_town.jpg') no-repeat 50% / cover;
+   }
+   &__icon {
+      border: 1px solid $white_text;
+      width: 102px;
+      height: 102px;
+      border-radius: 100%;
+      padding: 20px 0 0 23px;
+      margin: 0 auto;
+      img {
+         width: 53px;
+         height: 53px;
+         object-fit: cover;
+      }
+   }
+   &__title {
+      margin-top: 20px;
+      color: $white_text;
+      text-transform: unset;
+   }
+   &__descr {
+      width: 985px;
+      font-size: 19px;
+      font-weight: 300;
+      color: $white_text;
+      text-align: center;
+      margin: 20px auto 0 auto;
+   }
+}

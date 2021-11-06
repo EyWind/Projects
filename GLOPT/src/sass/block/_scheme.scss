@@ -1,0 +1,36 @@
+.scheme {
+   padding: 50px 0 45px 0;
+   background-color: $bg-color;
+   &__wrapper {
+      margin-top: 33px;
+      display: grid;
+      grid-template-columns: repeat(4, 250px);
+      grid-auto-rows: minmax(120px auto);
+      gap: 45px 30px;
+      justify-content: center;
+   }
+   &__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      &-title {
+         margin-top: 10px;
+      }
+      &-descr {
+         text-align: center;
+      }
+      img {
+         width: 55px;
+         height: 55px;
+         object-fit: cover;
+      }
+   }
+   &__scnd-row {
+      grid-column: 1 / 5;
+      display: grid;
+      grid-template-columns: repeat(3, 250px);
+      grid-auto-rows: minmax(120px auto);
+      justify-content: center;
+      gap: 45px 30px;
+   }
+}

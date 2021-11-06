@@ -1,0 +1,115 @@
+.price {
+   padding: 50px 0;
+   &__descr {
+      width: 690px;
+      font-size: 21px;
+      font-weight: 300;
+      color: $black-text;
+      text-align: center;
+      margin: 17px auto 0 auto;
+      line-height: 25px;
+   }
+   &__wrapper {
+      margin-top: 58px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 260px);
+      grid-auto-rows: minmax(355px, auto);
+      gap: 30px;
+      justify-content: center;
+   }
+   &__item {
+      width: 100%;
+      min-height: 355px;
+      border: 1px solid rgba($color: $grey-text, $alpha: .4);
+      padding-bottom: 25px;
+      position: relative;
+      overflow: hidden;
+      &-title {
+         width: 100%;
+         min-height: 60px;
+         background-color: $sub-color;
+         font-size: 16px;
+         font-weight: 700;
+         line-height: 20px;
+         color: $white-text;
+         text-transform: uppercase;
+         text-align: center;
+         padding-top: 20px;
+      }
+      &-body {
+         width: calc(200% + 10px);
+         display: flex;
+      }
+      &-front {
+         width: 50%;
+         padding: 14px 20px 75px 20px;
+         transform: translateX(-100%);
+         transition: .3s all;
+         &_active {
+            transform: translateX(0);
+         }
+      }
+      &-back {
+         padding: 14px 20px 75px 20px;
+         width: 50%;
+         transform: translateX(0);
+         transition: .3s all;
+         &_active {
+            transform: translateX(-100%);
+         }
+         &__list {
+            text-align: center;
+            list-style-type: none;
+         }
+         &__text {
+            text-align: center;
+         }
+         .divider {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+         }
+         a {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: $black-text;
+            transition: .2s all;
+            &:hover {
+               color: $main-color;
+            }
+         }
+      }
+      img {
+         display: block;
+         margin: 0 auto;
+         width: 60px;
+         height: 57px;
+         object-fit: cover;
+      }
+      &-delivery {
+         width: 182px;
+         margin: 12px auto 0 auto;
+         font-size: 14px;
+         font-weight: 400;
+         color: $black-text;
+         text-align: center;
+         span {
+            font-size: 28px;
+            color: $main-color;
+            line-height: 30px;
+         }
+      }
+      &-descr {
+         margin-top: 5px;
+         text-align: center;
+      }
+      button {
+         position: absolute;
+         bottom: 0;
+         left: 20%;
+      }
+   }
+}

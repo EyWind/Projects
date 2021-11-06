@@ -1,0 +1,9 @@
+@mixin promo-line {
+   content: '';
+   position: absolute;
+   width: 390px;
+   border-top: 1px solid $white-text;
+   left: -400px;
+   top: 50%;
+   transform: translateY(-50%);
+}
